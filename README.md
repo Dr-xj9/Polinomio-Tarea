@@ -11,7 +11,7 @@ El programa recibe 3 números correspondientes a los coeficientes del polinomio 
 2. Obtener Raíces reales.
     
     - Si el valor del discriminante es mayor que 0, hay dos raíces reales distintas. Se obtienen utilizando la fórmula general, aplicando suma y resta.
-    -  Si el discriminante es igual a 0, hay una raíz real.
+    - Si el discriminante es igual a 0, hay una raíz real.
 
 3. Si el discriminante es menor que 0, no hay raíces reales.
 
@@ -22,37 +22,33 @@ Para compilar y ejecutar correctamente el programa se necesita lo siguiente:
 ### Requisitos
 
 - CMake instalado y configurado en el sistema.
-- Compilador de C++ (MinGW g++ o MSVS)
+- MinGW g++. Si aún no lo tiene lo puede encontrar en el repositorio:     https://github.com/skeeto/w64devkit/releases
+- Git (si aún no lo tiene).
 
 ### Importante
-Es necesario establecer la ruta donde instaló el compilador y la ruta de CMake en la variable del sistema ```PATH``` si no lo ha hecho previamente.
+- Es necesario establecer la ruta donde instaló MinGW (la carpeta ```bin```) en la variable de entorno del sistema ```PATH``` si no lo ha hecho previamente. Para hacer esto busque en Windows "variables de entorno del sistema", y de click en la opción variables de entorno.
+- Además seleccionar la opción ```add CMake to PATH enviroment variable``` de CMake cuando ejecute el instalador de CMake, si no lo ha hecho.
 
 ### Compilación
 
-1. Clonar este repositorio.
+1. Abra una consola de linea de comandos en Windows y clone este repositorio con:
+```bash
+git clone https://github.com/Dr-xj9/Polinomio-Tarea.git
+```
 
 2. Crea un directorio para la construcción del programa.
-puede crearlo usando una linea de comando con la siguiente instrucción.
+puede crearlo usando las siguientes instrucciones.
 ```bash
-mkdir build  #Crear el directorio
-cd build     #Cambiar de directorio
+mkdir build 
+cd build     
 ```
 
-3. Ejecutar CMake para generar los archivos de construcción:
-
-Si tiene mas de un compilador puede ser necesario especificarlo al ejecutar CMake, para esto usamos la opción ```-G```, donde especifica el generador para compilar el proyecto.
-
-- Si usa el compilador MinGW g++:
+3. Ejecutar CMake especificando el generador ```MinGW Makefiles```:
 ```bash
-cmake .. -G = "MinGW Makefiles"
-```
+cmake .. -G="MinGW Makefiles"
+``` 
 
-- Si usa el compilador Microsoft Visual Studio:
-```bash
-cmake .. -G = "Visual Studio 16 2019"
-```
-
-4. Compila el proyecto
+4. Ahora puede compilar el proyecto:
 ```bash
 cmake --build .
 ```
@@ -63,4 +59,8 @@ Para ejecutar el programa (en el mismo directorio ```build```) tendrás el ejecu
 findroots.exe a b c
 ```
 Donde a, b y c son los coeficientes del polinomio de grado 2.
-
+La salida mostrará algo como esto:
+```bash
+findroots.exe 1 -5 6
+{3, 2}
+```
