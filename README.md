@@ -81,3 +81,12 @@ CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
 -- Configuring incomplete, errors occurred!
 ```
 Esto puede deberse a que no se ha configurado la ruta a la carpeta bin de MinGW en la variable de entorno del sistema PATH. Es necesario configurarla antes de ejecutar CMake. Puedes cerrar la terminal y volver a entrar en el directorio correspondiente una vez que lo hayas configurado.
+
+Otro posible error es como el siguiente:
+```bash
+stod: undefined
+```
+Esto se debe a diferencias del compilador o sus versiones por lo que es necesario incluir explicitamente la librería string al código.
+```bash```
+#include<string>
+```
