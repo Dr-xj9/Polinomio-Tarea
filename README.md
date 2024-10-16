@@ -21,7 +21,7 @@ Para compilar y ejecutar correctamente el programa, asegúrate de tener los sigu
 ### Requisitos
 
 - CMake.
-- MinGW g++. Si aún no lo tiene, lo puede encontrar en el repositorio:     https://github.com/skeeto/w64devkit/releases
+- MinGW g++. Si aún no lo tiene, lo puede encontrar en el repositorio:     https://github.com/skeeto/w64devkit/releases Descomprima los archivos en el directorio de su elección.
 - Git.
 
 ### Importante
