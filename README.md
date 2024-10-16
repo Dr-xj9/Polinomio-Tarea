@@ -87,6 +87,6 @@ Otro posible error es como el siguiente:
 stod: undefined
 ```
 Esto se debe a diferencias del compilador o sus versiones por lo que es necesario incluir explicitamente la librería string al código.
-```bash```
+```bash
 #include<string>
 ```
